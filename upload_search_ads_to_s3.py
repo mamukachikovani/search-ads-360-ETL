@@ -27,9 +27,9 @@ import date_range_checker as data
 
 params = {
     'region': 'us-east-1',
-    'database': 'grd_merck',
-    'bucket': 'mbww-gr2-custom-initiative',
-    'path': 'merck/LenvimaSearch/',
+    'database': 'database_name',
+    'bucket': 'your_s3_backet',
+    'path': 'path_to_your_directory',
 }
 
 session = boto3.Session(profile_name='default')

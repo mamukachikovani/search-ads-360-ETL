@@ -19,10 +19,10 @@ from retrying import retry
 
 params = {
     'region': 'us-east-1',
-    'database': 'grd_merck',
-    'bucket': 'mbww-gr2-custom-initiative',
-    'path': 'merck/LenvimaSearch/',
-    'query': """select month from AwsDataCatalog.gr2_custom_i_merck.lenvima_search
+    'database': 'database_name',
+    'bucket': 'your_s3_bucket',
+    'path': 'path_to_your_project_folder',
+    'query': """select month from database_table
                 group by month
                 order by month"""
 }
@@ -50,14 +50,7 @@ def query_results(session, params):
         QueryExecutionId = response_query_execution_id['QueryExecutionId']
     )
 
-    #print(response_get_query_details)
-
-    # time.sleep(1)
-    ## Condition for checking the details of response
-
-    #status = 'RUNNING'
-    #iterations = 1
-    
+        
     RETRY_COUNT = 10    
     status = 'QUEUED'
 
@@ -114,11 +107,10 @@ def query_to_df():
     
     data = query[1]
     
-    #print(type(df))
+    
     
        
-    #list1 = []
-    
+        
     df_query = pd.DataFrame(columns = ['month'])
 
     print(data)
@@ -136,31 +128,11 @@ def query_to_df():
     
     df_query['month'] = pd.to_datetime(df_query['month'], errors='coerce')
 
-
-
     df_query = df_query.dropna()
     
     df_query['month'] = df_query['month'].dt.date
     
-       
-     
-    
-    
-    print(df_query.info())
-    
-   
-    
     df_data = transform.search_ads_data()
-    
-    print(df_query.info())
-    
-       
-     
-    print(max(df_query['month']))
-    
-    print(max(df_data['month']))
-    
-    
     
 # =============================================================================
 # validate date range against existing dataset in s3 bucket

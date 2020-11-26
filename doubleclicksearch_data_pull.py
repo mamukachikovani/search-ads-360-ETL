@@ -109,7 +109,7 @@ def request_report(service):
            # { "columnName": "impr" },
             #{ "columnName": "clicks" },
             { "columnName": "cost" },
-            {"savedColumnName":'UVs'}     #GA Goal Completion
+            {"savedColumnName":'key action'}     #GA Goal Completion
 
            
 
