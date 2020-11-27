@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 14 10:17:50 2020
 
-@author: mamuka.chikovani
-"""
 
 # -*- coding: utf-8 -*-
 """

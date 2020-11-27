@@ -69,7 +69,7 @@ def search_ads_data():
     df_total.columns = df_total.columns.str.lower()
     df_total.columns = df_total.columns.str.replace(' ', '')
     
-    df_total = df_total[['account',	'month', 'cost', 'key action']]
+    df_total = df_total[['account', 'month', 'cost', 'key action']]
     
    
     return df_total
