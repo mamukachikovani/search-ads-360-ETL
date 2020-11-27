@@ -29,7 +29,7 @@ params = {
     'region': 'us-east-1',
     'database': 'database_name',
     'bucket': 'your_s3_backet',
-    'path': 'path_to_your_directory',
+    'path': 'path_to_your_project_folder',
 }
 
 session = boto3.Session(profile_name='default')

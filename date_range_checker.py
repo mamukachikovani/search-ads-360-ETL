@@ -78,14 +78,8 @@ def query_results(session, params):
             )
             result_data = response_query_result['ResultSet']
             
-            filename = re.findall('.*\/(.*)', location)[0]
+            #filename = re.findall('.*\/(.*)', location)[0]
             
-            #print(filename)
-            
-            #print(os.listdir(location))
-                        
-            #print("location: ", location)
-            #print("data: ", result_data)
             return location, result_data
         else:
             time.sleep(1)

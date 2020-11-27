@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """
 Created on Tue Jul 28 09:57:09 2020
 
@@ -31,12 +31,17 @@ pd.set_option('display.max_columns', 50)
 
 def search_ads_data():
     
+    
+
     mypath = os.getcwd()
-          
+    print(mypath)
+        
         
     list_of_files = glob.glob(mypath + '/*.csv')
     
-       
+    print(list_of_files)
+    
+    
     df_total = pd.DataFrame()
 # =============================================================================
 # loop over .csv files in your working directory 
@@ -61,11 +66,12 @@ def search_ads_data():
     
     df_total['month'] = df_total['month'].dt.date
     
-        
-    df_total = df_total[['account', 'month', 'cost', 'key action']]
-      
-        
-        
+    df_total.columns = df_total.columns.str.lower()
+    df_total.columns = df_total.columns.str.replace(' ', '')
+    
+    df_total = df_total[['account',	'month', 'cost', 'key action']]
+    
+   
     return df_total
 
 
