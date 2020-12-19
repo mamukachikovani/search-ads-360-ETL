@@ -41,7 +41,7 @@ Follow the instructions described below to create a project in Google API Consol
 
 https://developers.google.com/search-ads/v2/authorizing
 
-##  Running the tests
+##  Run the tests
 
 Use the credentials in search_ads_360_data_extract.py to generate a report and extract the data in .csv file. 
 
