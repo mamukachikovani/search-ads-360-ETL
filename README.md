@@ -45,7 +45,11 @@ https://developers.google.com/search-ads/v2/authorizing
 
 Use the credentials in search_ads_360_data_extract.py to generate a report and extract the data in .csv file. 
 
-Set credentials in the AWS credentials profile file on your local system, located at:
+Use AWS Command Line Interface (AWS CLI) to configure basic settings to interact with AWS:
+
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
+
+By default, AWS credentials profile file will be located at:
 
 ~/.aws/credentials on Linux, macOS, or Unix
 
