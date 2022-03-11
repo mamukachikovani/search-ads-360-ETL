@@ -1,6 +1,8 @@
 boto3==1.21.15
 botocore==1.24.15
 google-api-core==2.7.1
+dependabot/pip/google-api-python-client-2.40.0
+google-api-python-client==2.40.0
 google-api-python-client==1.10.0
 google-auth==2.6.0
 google-auth-httplib2==0.0.4
