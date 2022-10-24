@@ -197,7 +197,7 @@ def download_files(service, report_id, report_fragment):
     report_id: The ID DS has assigned to a report.
     report_fragment: The 0-based index of the file fragment from the files array.
   """
-  f = open('keytruda_lenvima_consumer_report' + '.csv', 'wb')
+  f = open(report_id + '.csv', 'wb')
   request = service.reports().getFile(reportId=report_id, reportFragment=report_fragment)
   f.write(request.execute())
   f.close() 
