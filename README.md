@@ -1,12 +1,33 @@
-##  Project Descreption
-  
-This project is an automation for Search Ads 360 data reporting.  The python scripts efficiently automate the extraction, tranformation & load process.
-The data extraction script eliminates the need for downloading reports manually from SA360 platform, saving time through automating a monthly report data pull. The next module of the project transforms the downloaded report.  It focuses on formating the data types, rearranging and renaming the columns for database compatability.
-The final module, the data load, automates the loading process to AWS S3 data lake.  The data is then easily accessible for Tableau reporting dashboards through the Amazon Athena connector
+
+## Project Name: Search Ads 360 Data Reporting Automation
+
+This project aims to automate the process of reporting Search Ads 360 (SA360) data. Python scripts are utilized to efficiently handle the extraction, transformation, and loading (ETL) process.
+
+## Features
+### Data Extraction: 
+The data extraction script eliminates the manual effort of downloading reports from the SA360 platform. It automates the monthly data pull for report generation, saving valuable time.
+
+### Data Transformation:
+The transformation module focuses on formatting the data types, rearranging columns, and renaming them to ensure compatibility with the database. This step prepares the data for seamless integration.
+
+### Data Load:
+The data load module automates the loading process to AWS S3 data lake. This enables easy accessibility of the data for reporting purposes using Tableau reporting dashboards through the Amazon Athena connector.
+
+## Benefits
+Time-Saving: Automating the data extraction eliminates the need for manual downloading, reducing effort and saving time.
+Data Consistency: The transformation process ensures consistent data formatting and compatibility with the database.
+Streamlined Reporting: The automated loading process enables quick and easy access to data for reporting in Tableau dashboards through Amazon Athena.
+
+## Requirements
+* Python 3.x
+* SA360 Account Credentials
+* AWS Account Credentials
+* Tableau and Amazon Athena Configuration
+
 
 ##  Getting Started
 
-In order to use this package, you first need to go through the following steps:
+Clone the repository: git clone git@github.com:mamukachikovani/search-ads-360-ETL.git
 
 ##  Installation
 
@@ -62,6 +83,6 @@ Run main.py file to complete the full ETL (Extract, Transform & Load) process
 $ python main.py
 ```
 
-
+Feel free to customize and extend the project as per your specific requirements.
 
 
